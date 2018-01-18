@@ -11,12 +11,13 @@
 
           </q-card-title>
           <q-card-main >
-            <p class="text-faded">{{tag.hastag}}</p>
+            <p class="text-faded">{{time.hastag}}</p>
           </q-card-main>
           <q-card-separator />
-          <q-card-actions>
+          <q-card-actions >
             <q-btn flat color="primary">Edit</q-btn>
           </q-card-actions>
+
         </q-card>
       </div>
     </div>

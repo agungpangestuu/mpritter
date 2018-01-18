@@ -33,7 +33,8 @@ require('dotenv').config();
 
           res.status(200).json({
             message:"connect",
-            token: token
+            token: token,
+            id: data._id
           })
         }
         else {

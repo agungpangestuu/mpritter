@@ -47,6 +47,7 @@ let actions = {
       .then(result => {
         console.log(result.data)
         localStorage.setItem('token', result.data.token)
+        localStorage.setItem('id', result.data.id)
         commit('setLogin', true)
       })
       .catch(err => {

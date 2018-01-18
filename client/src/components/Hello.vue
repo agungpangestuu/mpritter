@@ -13,7 +13,7 @@
 
       </q-toolbar>
       <!-- Navigation -->
-    
+
       <!-- Left Side Panel -->
       <div slot="left">
         <q-list no-border link inset-separator>
@@ -21,6 +21,10 @@
           <q-side-link item to="/">
             <q-item-side icon="rss feed" />
             <q-item-main label="Home" sublabel="if not have a account" />
+          </q-side-link>
+          <q-side-link item to="/profile">
+            <q-item-side icon="rss feed" />
+            <q-item-main label="Profile" sublabel="if not have a account" />
           </q-side-link>
           <q-side-link item to="/login">
             <q-item-side icon="rss feed" />

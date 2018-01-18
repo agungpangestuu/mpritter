@@ -1,6 +1,6 @@
 # mpritter
 
-
+Mini twitter
 
  List of User routes:
 
@@ -25,7 +25,8 @@ List of tweet routes:
 
   |           Route        |  HTTP  |             Description               |
   | ---------------------- | ------ | ------------------------------------- |
-  | / api / profile/:idUser             | GET    |get all tweet user                   |
+  | / api / profile/           | GET    |get all tweet user                   |
+  | / api / profile/{id Profile}        | PUT    | Edit tweet spesifik by id                   |
   | / api / profile/{id Profile}        | PUT    | Edit tweet spesifik by id                   |
 
 
