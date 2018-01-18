@@ -8,8 +8,7 @@ require('dotenv').config();
      let user = new User({
        username: req.body.username,
        password: bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)),
-       email: req.body.email,
-       fullname: req.body.fullname
+       email: req.body.email
      })
      user.save()
       .then(data => {
@@ -48,7 +47,6 @@ require('dotenv').config();
         result.username = req.body.username || result.username
         result.password = bcrypt.hashSync(req.body.password, bcrypt.genSaltSync(10)) || result.password
         result.email = req.body.email || result.email
-        result.fullname = req.body.fullname || result.fullname
 
         result.save()
           .then(data => {

@@ -23,6 +23,10 @@ let userSchema = new Schema({
     requires: true,
     unique: true
   }
+  profile: {
+    type: Schema.Types.ObjectId,
+    ref: 'Profile'
+  }
 })
 
 const userModel = mongoose.model('User', userSchema)
