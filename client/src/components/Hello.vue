@@ -26,13 +26,17 @@
             <q-item-side icon="rss feed" />
             <q-item-main label="Profile" sublabel="if not have a account" />
           </q-side-link>
-          <q-side-link item to="/login">
+          <q-side-link item to="/login" v-if="isLogin">
             <q-item-side icon="rss feed" />
             <q-item-main label="Login" sublabel="have a account" />
           </q-side-link>
-          <q-side-link item to="/formsign">
+          <q-side-link item to="/formsign" v-if="isLogin">
             <q-item-side icon="rss feed" />
             <q-item-main label="SignUp" sublabel="if not have a account" />
+          </q-side-link>
+          <q-side-link item to="/" v-if="!isLogin" @click="logout">
+            <q-item-side icon="rss feed" />
+            <q-item-main label="Logout" sublabel="if not have a account" />
           </q-side-link>
         </q-list>
       </div>
@@ -64,6 +68,7 @@ import {
   QListHeader,
   QScrollArea
 } from 'quasar'
+import { mapState, mapActions } from 'vuex'
 export default {
   components: {
     QLayout,
@@ -82,6 +87,20 @@ export default {
   },
   data () {
     return {}
+  },
+  computed: {
+    ...mapState([
+      'isLogin'
+    ])
+  },
+  methods: {
+    ...mapActions([
+      'checkLogin',
+      'logout'
+    ])
+  },
+  created () {
+    this.checkLogin()
   }
 }
 </script>
