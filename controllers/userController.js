@@ -36,6 +36,11 @@ require('dotenv').config();
             token: token
           })
         }
+        else {
+          res.status(401).json({
+            message:"gagal auth"
+          })
+        }
       })
    },
    updateUser (req, res) {

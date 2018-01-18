@@ -7,6 +7,7 @@ var isLogin = require('../helpers/Checklogin')
 router.post('/', isLogin, Tweet.createTwet);
 router.get('/', Tweet.getAllTweet);
 router.get('/:id', Tweet.getById);
+router.get('/:hastag', Tweet.getByHashtag);
 router.put('/:id', isLogin, Tweet.updateTwet);
 router.delete('/:id', isLogin, Tweet.removeTweet);
 

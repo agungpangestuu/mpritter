@@ -8,7 +8,6 @@ let profileSchema = new Schema({
   },
   firstname : {
     type : String
-    }
   },
   lastname: {
     type: String

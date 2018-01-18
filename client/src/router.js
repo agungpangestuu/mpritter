@@ -30,9 +30,19 @@ export default new VueRouter({
       component: load('Hello'),
       children: [
         {
+          path: '',
+          name: 'TimeLine',
+          component: load('TimeLine')
+        },
+        {
           path: 'login',
           name: 'LoginPage',
-          component: 'LoginPage'
+          component: load('LoginPage')
+        },
+        {
+          path: '/formsign',
+          name: 'FormSign',
+          component: load('FormSignup')
         }
       ]
     },

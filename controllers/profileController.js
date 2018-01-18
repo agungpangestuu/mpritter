@@ -14,13 +14,13 @@ require('dotenv').config();
      })
      profile.save()
       .then(data => {
-        User.findByIdAndUpdate(data.user,{profile: data._id})
-          .then(result => {
+        // User.findByIdAndUpdate(data.user,{profile: data._id})
+        //   .then(result => {
             res.status(200).json({
               message: "connect and create",
               data: data
             })
-          })
+          // })
       })
       .catch(err => {
         res.send(err)

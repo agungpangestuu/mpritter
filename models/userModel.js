@@ -22,7 +22,7 @@ let userSchema = new Schema({
     type: String,
     requires: true,
     unique: true
-  }
+  },
   profile: {
     type: Schema.Types.ObjectId,
     ref: 'Profile'

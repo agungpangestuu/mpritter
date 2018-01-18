@@ -54,6 +54,21 @@ module.exports = {
         })
       })
   },
+  getByHashtag () {
+    Tweet.find({hastag: req.params.hastag})
+      .then(data => {
+        res.status(200).json({
+          data: data,
+          message: "berhasil get"
+        })
+      })
+      .catch(err => {
+        console.log(err)
+        res.status(500).json({
+          message: "data gagal save"
+        })
+      })
+  },
   updateTwet (req, res) {
     let id = {
       _id: req.params.id
